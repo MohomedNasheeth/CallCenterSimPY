@@ -43,32 +43,6 @@ The script automatically generates the following files:
 
 ---
 
-## 📊 Understanding the Results
-
-### Key Metrics
-
-| Metric | Description | Ideal Value |
-|--------|-------------|-------------|
-| **avg_wait** | Average time customers spend waiting in queue | Lower is better |
-| **utilization** | Percentage of time agents are busy | 70-85% optimal |
-| **throughput** | Number of calls completed per time unit | Higher is better |
-
----
-
-## 🎯 Experiment Scenarios
-
-The simulation includes 5 pre-configured scenarios:
-
-| Scenario | Arrival Rate (λ) | Service Rate (μ) | Agents (c) | Purpose |
-|----------|------------------|------------------|------------|---------|
-| **BaseSystem_C2** | 4.0 | 1.0 | 2 | Baseline with minimal agents |
-| **BaseSystem_C4** | 4.0 | 1.0 | 4 | Increased capacity |
-| **BaseSystem_C8** | 4.0 | 1.0 | 8 | Maximum capacity |
-| **HigherLoad_C4** | 6.0 | 1.0 | 4 | Testing under heavy load |
-| **FasterService_C4** | 4.0 | 1.25 | 4 | Improved service speed |
-
----
-
 ## 🛠 Customization
 
 ### Modify Scenarios
@@ -91,20 +65,6 @@ Change the simulation time (default: 3000 time units):
 ```python
 metrics = run_simpy_simulation(s["lambda"], s["mu"], s["servers"], sim_time=5000)
 ```
-
----
-
-## 📈 Sample Results
-
-| Scenario | Avg Wait Time | Utilization | Throughput |
-|----------|--------------|-------------|------------|
-| BaseSystem_C2 | 750.61 | 100.0% | 1.967 |
-| BaseSystem_C4 | 12.74 | 98.2% | 3.964 |
-| BaseSystem_C8 | 0.018 | 51.1% | 4.023 |
-| HigherLoad_C4 | 490.62 | 100.0% | 3.997 |
-| FasterService_C4 | 0.756 | 82.9% | 4.100 |
-
----
 
 ## 📚 Learn More
 
@@ -136,12 +96,6 @@ Example:
 
 **MBNM NASHEETH**  
 Student ID: 321426009
-
----
-
-## 📄 License
-
-This project is available under the MIT License for educational purposes.
 
 ---
 
